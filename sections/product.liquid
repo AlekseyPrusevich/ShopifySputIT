@@ -1,12 +1,167 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+<section class="product" aria-labelledby="product-name">
+  <div class="product__container">
 
-{% stylesheet %}
-{% endstylesheet %}
+    <div class="product__info">
+      <h1 class="product__name text--header" id="product-name">White unisex t-shirt</h1>
+      <p class="product__code text--large mt-24">CHF 40</p>
+      <p class="color--tertiary mt-24">Tax included</p>
 
-{% javascript %}
-{% endjavascript %}
+
+      <form class="mt-48">
+        <fieldset>
+          <legend>Size</legend>
+          <div class="product__size-container">
+
+            <input type="radio" name="size" id="size--xs" class="product__size-radio" value="xs">
+            <label for="size--xs" class="product__size-label" aria-hidden="true">
+              <span class="visually-hidden">choose size </span>XS
+            </label>
+
+            <input type="radio" name="size" id="size--s" class="product__size-radio" value="s">
+            <label for="size--s" class="product__size-label" aria-hidden="true">
+              <span class="visually-hidden">choose size </span>S
+            </label>
+
+            <input type="radio" name="size" id="size--m" class="product__size-radio" value="m">
+            <label for="size--m" class="product__size-label" aria-hidden="true">
+              <span class="visually-hidden">choose size </span>M
+            </label>
+
+            <input type="radio" name="size" id="size--l" class="product__size-radio" value="l">
+            <label for="size--l" class="product__size-label" aria-hidden="true">
+              <span class="visually-hidden">choose size </span>L
+            </label>
+
+            <input type="radio" name="size" id="size--xl" class="product__size-radio" value="xl">
+            <label for="size--xl" class="product__size-label" aria-hidden="true">
+              <span class="visually-hidden">choose size </span>XL
+            </label>
+
+            <input type="radio" name="size" id="size--2xl" class="product__size-radio" value="2xl" disabled>
+            <label for="size--2xl" class="product__size-label product__size-label" aria-hidden="true">
+              <span class="visually-hidden">choose size </span>2XL
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="mt-24">            
+          <legend>Color - White</legend> 
+          <div class="product__size-container">
+
+            <input type="radio" id="color--white" class="product__color-radio" name="color" value="white">
+            <label for="color--white" class="product__color-label" title="White" aria-hidden="true">
+              <div class="product__color product__color--white"></div>
+              <span class="visually-hidden">choose color white</span>
+            </label>
+
+            <input type="radio" id="color--black" class="product__color-radio" name="color" value="black">
+            <label for="color--black" class="product__color-label" title="Black" aria-hidden="true">
+              <div class="product__color product__color--black"></div>
+              <span class="visually-hidden">choose color black</span>
+            </label>
+
+            <input type="radio" id="color--gray" class="product__color-radio" name="color" value="gray">
+            <label for="color--gray" class="product__color-label" title="Gray" aria-hidden="true">
+              <div class="product__color product__color--gray"></div>
+              <span class="visually-hidden">choose color gray</span>
+            </label>
+
+            <input type="radio" id="color--purple-latte" class="product__color-radio" name="color" value="purple latte">
+            <label for="color--purple-latte" class="product__color-label" title="Purple latte" aria-hidden="true">
+              <div class="product__color product__color--purple-latte"></div>
+              <span class="visually-hidden">choose color purple latte</span>
+            </label>
+
+            <input type="radio" id="color--red" class="product__color-radio" name="color" value="red" disabled>
+            <label for="color--red" class="product__color-label" title="Red" aria-hidden="true">
+              <div class="product__color product__color--red"></div>
+              <span class="visually-hidden">choose color red</span>
+            </label>
+
+            <input type="radio" id="color--orange" class="product__color-radio" name="color" value="orange" disabled>
+            <label for="color--orange" class="product__color-label" title="Orange" aria-hidden="true">
+              <div class="product__color product__color--orange"></div>
+              <span class="visually-hidden">choose color orange</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="mt-24">
+          <legend>Quantity</legend>
+          <div class="product__quantity-container">
+            <button class="product__quantity-button" title="Decrease quantity" type="button">
+              <span aria-hidden="true">-</span>
+            </button>
+            <input 
+                   type="text" 
+                   class="product__quantity-count" 
+                   name="product-count" 
+                   value="1" 
+                   aria-live="polite" 
+                   role="status"
+                   >
+            <button class="product__quantity-button" title="Increase quantity" type="button">
+              <span aria-hidden="true">+</span>
+            </button>
+          </div>
+        </fieldset>
+
+        <fieldset class="mt-40">
+          <legend>Buy product</legend>
+          <div class="product__button-container">
+            <button class="button button--transent" type="submit">
+              <span>add <span class="visually-hidden">White unisex t-shirt</span> to cart</span>
+            </button>
+            <button class="button button--blue" type="submit">
+              <span>buy <span class="visually-hidden">White unisex t-shirt</span> it now</span>
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
+      <p class="mt-48 text--big">
+        A unisex basic garment with a loose fit. Light and comfortable to your skin.
+      </p>
+      <p class="mt-24 text--big">
+        Certification of cotton - GOTS
+      </p>
+    </div>
+
+    <div class="product__media">
+      <img src="source/img/products/product.jpg" alt="" class="product__image" role="presentation">
+    </div>
+  </div>
+
+  <section class="product__additional" aria-labelledby="product-additional">
+    <h2 class="visually-hidden" id="product-additional">Additional information about product</h2>
+    <ul class="product__additional-list" role="list">
+      <li class="product__additional-item">
+        <div class="product__additional-container">
+          <p class="product__additional-title">Sizing & Fit</p>
+          <button class="product__additional-button product__additional-button--action"><span class="visually-hidden">Show more information about sizing & fit</span></button>
+        </div>
+        <div class="product__additional-description product__additional-description--show">
+          <p>Olga is 175cm, she is wearing a size S.</p>
+        </div>
+      </li>
+      <li class="product__additional-item">
+        <div class="product__additional-container">
+          <p class="product__additional-title">Composition & Care</p>
+          <button class="product__additional-button"><span class="visually-hidden">Show more information about composition & care</span></button>
+        </div>
+        <div class="product__additional-description">
+          <p></p>
+        </div>
+      </li>
+      <li class="product__additional-item">
+        <div class="product__additional-container">
+          <p class="product__additional-title">Delivery & Returns</p>
+          <button class="product__additional-button"><span class="visually-hidden">Show more information about delivery & returns</span></button>
+        </div>
+        <div class="product__additional-description">
+          <p></p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</section>
